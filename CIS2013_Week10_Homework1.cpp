@@ -24,7 +24,8 @@ int main(){
 		cout << "Please enter number of bombs: " << endl;
 		cin >> bombs;
 		
-		
+		cout << "			Time to play Minesweeper!" << endl;
+		cout << "                                     "<< endl;
 		Bytearray *m = new Bytearray[y];
 		
 		for (int i = 0; i < y; i++)
