@@ -38,9 +38,36 @@ int main(){
 			m[i][j] = '.';
 		}
 	}
-	
+		
+		int* bomb = new int [bombs*2];
+		int bx,by;
+		
+		for (int n=0; n < bombs*2; n+=2)
+		{
+			bx = rand() % x;
+			by = rand() % y;
+			
+			while (1) {
+				int i;
+				for(i=0; i<n; i+=2){
+					
+					if (bombs[i] == bx && bombs[i+1] == by)
+					
+					{bx=rand() % x;
+					by=rand() % y;
+					break;
+					}
+					
+				}
+				if(i==n)
+					break;
+			}
+						
+				
 	
 	print(m, x, y);
+	
+	
 		
 		
 			
