@@ -77,6 +77,7 @@ int main(){
 	
 	
 		while(1) {
+			unsigned int column =x+1, row =y+1;
 			
 			while (columnGuess >= x || rowGuess >= y){
 				
