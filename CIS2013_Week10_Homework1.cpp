@@ -11,7 +11,7 @@ int main(){
 	
 	
 	
-	int bombs =0;
+	int bomb =0;
 	int x,y,i;
 	
 	
@@ -22,7 +22,7 @@ int main(){
 		cout << "Please enter board Width: " << endl;
 		cin >> y;
 		cout << "Please enter number of bombs: " << endl;
-		cin >> bombs;
+		cin >> bomb;
 		
 		cout << "			Time to play Minesweeper!" << endl;
 		cout << "                                     "<< endl;
@@ -39,29 +39,31 @@ int main(){
 		}
 	}
 		
-		int* bomb = new int [bombs*2];
+		int* bombs = new int[bomb*2];
 		int bx,by;
 		
-		for (int n=0; n < bombs*2; n+=2)
+		for (int n=0;n < bomb*2; n+=2)
 		{
-			bx = rand() % x;
-			by = rand() % y;
+			bx=rand()% x;
+			by=rand()% y;
 			
-			while (1) {
-				int i;
-				for(i=0; i<n; i+=2){
-					
+			while(1) {
+				for (i=0; i < n; i+=2) {
 					if (bombs[i] == bx && bombs[i+1] == by)
-					
-					{bx=rand() % x;
-					by=rand() % y;
-					break;
-					}
-					
+						
+						{bx=rand()%x;
+						by=rand()%y;
+						break;
+						}
 				}
-				if(i==n)
+				if (i == n)
 					break;
 			}
+			
+			bombs[n] = bx;
+			bombs[n+1]=by;
+		}
+		
 						
 				
 	
