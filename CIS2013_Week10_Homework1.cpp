@@ -7,13 +7,15 @@ typedef unsigned char* Bytearray;
 
 void print(unsigned char** board, int x, int y);
 
+int getCoordinate(void);
+
 int main(){
 	
 	
 	
 	int bomb =0;
 	int x,y,i;
-	
+	int rowGuess,columnGuess;
 	
 	
 	
@@ -70,6 +72,24 @@ int main(){
 	print(m, x, y);
 	
 	
+	
+	
+	
+	
+		while(1) {
+			
+			while (columnGuess >= x || rowGuess >= y){
+				
+				cout << "Please eneter Coordinates: "<< endl;
+				
+				cout << "X: ";
+				cin >> columnGuess;
+				cout<< "Y: ";
+				cin>> rowGuess;
+				cout<< endl;
+			}
+		}
+			
 		
 		
 			
@@ -90,8 +110,8 @@ int main(){
 	return 0;
 }
 
- void print(unsigned char** board, int x, int y)
-{
+ void print(unsigned char** board, int x, int y){
+
 
 	cout << '\t';
 	for (int i = 0; i < x;i++)
