@@ -7,16 +7,17 @@ typedef unsigned char* Bytearray;
 
 void print(unsigned char** board, int x, int y);
 
-int getCoordinate(void);
+
 
 int main(){
 	
 	
 	
 	int bomb =0;
-	int x,y,i;
+	int x,y,i,h,w;
+	int success;
 	int rowGuess,columnGuess;
-	
+	bool alive= true;
 	
 	
 		cout << "Please enter board Height: " << endl;
@@ -25,6 +26,8 @@ int main(){
 		cin >> y;
 		cout << "Please enter number of bombs: " << endl;
 		cin >> bomb;
+		success=(x*y)-bomb;
+		cout<<endl;
 		
 		cout << "			Time to play Minesweeper!" << endl;
 		cout << "                                     "<< endl;
@@ -76,21 +79,18 @@ int main(){
 	
 	
 	
-		while(1) {
-			unsigned int column =x+1, row =y+1;
-			
-			while (columnGuess >= x || rowGuess >= y){
-				
-				cout << "Please eneter Coordinates: "<< endl;
-				
-				cout << "X: ";
-				cin >> columnGuess;
-				cout<< "Y: ";
-				cin>> rowGuess;
-				cout<< endl;
+		while ((alive)&&(success!=0)){
+			cout << endl << "Choose your X and Y coordinates: ";
+			cin>> h >> w;
+			if ((h>=x)||(x>=2)){cout << "invalid respone - choose another: " << endl;}
+			else if (m[h][w]=='.'){alive=false;
+				m[h][w]='@';}
+			else if (m[h][w]!='.'){
+				m[h][w] = 'f';
+				success--;
 			}
-		}
 			
+		}
 		
 		
 			
