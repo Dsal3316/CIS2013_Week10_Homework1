@@ -80,7 +80,7 @@ int main(){
 	
 	
 		while ((alive)&&(success!=0)){
-			cout << endl << "Choose your X and Y coordinates: ";
+			cout << endl << "Choose your X and Y coordinates: " << endl;
 			cout << "X: " << endl;
 			cin >> h;
 			cout << "Y: " << endl;
