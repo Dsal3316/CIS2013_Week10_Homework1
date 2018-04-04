@@ -15,7 +15,7 @@ int main(){
 	
 	
 	int bomb =0;
-	int x,y,i,h,w;
+	int x,y,i,j,h,w;
 	int success;
 	int rowGuess,columnGuess;
 	bool alive= true;
@@ -87,11 +87,11 @@ int main(){
 			cin >> h;
 			cout << "Y: ";
 			cin >> w;
-			if ((h>=x)||(w>=y)){cout << "invalid respone - choose another: " << endl;}
-			else if (m[h][w]=='.'){alive=false;
-				m[h][w]='@';}
-			else if (m[h][w]!='.'){
-				m[h][w] = 'f';
+			if ((h>=i)||(w>=j)){cout << "invalid respone - choose another: " << endl;}
+			else if (m[i][j]=='.'){alive=false;
+				m[i][j]='@';}
+			else if (m[i][j]!='.'){
+				m[i][j] = 'f';
 				success--;
 			}
 			
