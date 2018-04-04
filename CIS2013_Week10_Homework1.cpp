@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstring>
-#include <time.h>
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 
 typedef unsigned char* Bytearray;
@@ -18,6 +19,7 @@ int main(){
 	int success;
 	int rowGuess,columnGuess;
 	bool alive= true;
+	srand(time(0));
 	
 	
 		cout << "Please enter board Height: " << endl;
