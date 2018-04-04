@@ -81,7 +81,10 @@ int main(){
 	
 		while ((alive)&&(success!=0)){
 			cout << endl << "Choose your X and Y coordinates: ";
-			cin>> h >> w;
+			cout << "X: " << endl;
+			cin >> h;
+			cout << "Y: " << endl;
+			cin >> w;
 			if ((h>=x)||(x>=2)){cout << "invalid respone - choose another: " << endl;}
 			else if (m[h][w]=='.'){alive=false;
 				m[h][w]='@';}
