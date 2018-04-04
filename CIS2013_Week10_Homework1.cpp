@@ -85,7 +85,7 @@ int main(){
 			cin >> h;
 			cout << "Y: " << endl;
 			cin >> w;
-			if ((h>=x)||(x>=2)){cout << "invalid respone - choose another: " << endl;}
+			if ((h>=x)||(w>=y)){cout << "invalid respone - choose another: " << endl;}
 			else if (m[h][w]=='.'){alive=false;
 				m[h][w]='@';}
 			else if (m[h][w]!='.'){
