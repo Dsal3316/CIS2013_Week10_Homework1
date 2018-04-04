@@ -72,7 +72,7 @@ int main(){
 						
 				
 	
-	print(m, x, y);
+	print (m, x,y);
 	
 	
 	
@@ -94,8 +94,19 @@ int main(){
 			}
 			
 		}
+	for(int n=0; n<bomb * 2; n+=2){	
 		
-	print (m,x,y);
+		if (bombs[n] == h && bombs[n+1] == w){
+			for(int k = 0; k < bomb * 2; k +=2){
+				m[bombs[k+1]][bombs[k]] = 'X';
+			}
+		m[bombs[n]][bombs[n+1]] = '@';
+		}
+	}
+		
+		print(m,x,y);
+		
+
 	
 	if (success==0){cout << "Winner Winner Chicken Dinner!";
 	alive=false;}
