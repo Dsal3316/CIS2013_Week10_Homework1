@@ -81,9 +81,9 @@ int main(){
 	
 		while ((alive)&&(success!=0)){
 			cout << endl << "Choose your X and Y coordinates: " << endl;
-			cout << "X: " << endl;
+			cout << "X: ";
 			cin >> h;
-			cout << "Y: " << endl;
+			cout << "Y: ";
 			cin >> w;
 			if ((h>=x)||(w>=y)){cout << "invalid respone - choose another: " << endl;}
 			else if (m[h][w]=='.'){alive=false;
@@ -94,6 +94,12 @@ int main(){
 			}
 			
 		}
+		
+	print (m,x,y);
+	
+	if (success==0){cout << "Winner Winner Chicken Dinner!";
+	alive=false;}
+	else{cout << "        Better luck next time" << endl;}
 		
 		
 			
