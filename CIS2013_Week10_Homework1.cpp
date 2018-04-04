@@ -87,15 +87,19 @@ int main(){
 			cin >> h;
 			cout << "Y: ";
 			cin >> w;
-			if ((h>=i)||(w>=j)){cout << "invalid respone - choose another: " << endl;}
-			else if (m[i][j]=='.'){alive=false;
-				m[i][j]='@';}
-			else if (m[i][j]!='.'){
-				m[i][j] = 'f';
+			if ((h>=x)||(w>=y)){cout << "invalid respone - choose another: " << endl;}
+			// issue is in this statement
+			else if (m[h][w]=='.'){alive=false;
+				m[h][w]='@';}
+			else if (m[h][w]!='.'){
+				m[h][w] = 'f';
 				success--;
 			}
 			
 		}
+		
+	
+	
 	for(int n=0; n<bomb * 2; n+=2){	
 		
 		if (bombs[n] == h && bombs[n+1] == w){
@@ -105,8 +109,16 @@ int main(){
 		m[bombs[n]][bombs[n+1]] = '@';
 		}
 	}
+	print(m,x,y);
 		
-		print(m,x,y);
+	
+	
+	
+
+	
+
+		
+		
 		
 
 	
